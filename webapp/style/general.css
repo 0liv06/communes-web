@@ -1,0 +1,34 @@
+body { margin : 0; padding :0; overflow : hidden; }
+div#search-container {
+    margin-top : -4%; 
+    margin-left: 1%;
+}
+/*div#map {
+    z-index : -1;
+    position: relative;
+}*/
+
+/*div#search-container {
+    margin-top : -100px;
+    width: 100%;
+    position: relative;
+    padding : 0 40px;
+}
+
+input#search-btn { 
+    height : 25px; 
+    padding : 10px; 
+    border : 2px solid gray; 
+    background : rgba(0,0,0,0.2);
+    width: 77%;
+    margin-left: -6px;
+}
+
+select#search-type {
+    background : gray;
+    height: 49px;
+    display: inline-block;
+    border: 2px solid gray;
+    padding: 10px;
+    margin: 0;
+}*/

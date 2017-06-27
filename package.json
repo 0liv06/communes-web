@@ -1,0 +1,16 @@
+{
+  "name": "communes-web",
+  "version": "1.0.0",
+  "description": "A map with some cool dots",
+  "main": "server.js",
+  "dependencies": {
+    "osm": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Olivier Donnadei",
+  "license": "ISC"
+}
