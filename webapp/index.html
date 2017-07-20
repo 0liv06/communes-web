@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css"/>
         <link rel="stylesheet" href="css/general.css" type="text/css"/>
         <link rel="stylesheet" href="src/openlayers/ol.css" type="text/css"/>
+        
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+        <script src="lib/latlon-geohash/latlon-geohash.js"></script>
         <script src="src/openlayers/ol-debug.js"></script>
         <script src="src/control/map.js"></script>
         <script src="src/control/search.js"></script>
+        
+    
     </head>
     <body>  
         <div class="container-fluid">
@@ -34,17 +39,18 @@
             </div>
         </div>
         <script>
-            var serverUrl       = 'http://localhost:8081/search/';
+            var serverUrl       = 'http://localhost:8081/';
             var searchType      = document.getElementById('search-type');
             var searchInput     = document.getElementById('search-btn');
             
-            var mapControl      = new MapControl('map', []);
             var searchControl   = new SearchControl(searchType.value, serverUrl);
+            var mapControl      = new MapControl('map', [], searchControl);
             
             function addAll(locations) {
-                
-                mapControl.addAll(elements);
+                mapControl.addAll(locations);
             }
+            
+    
             
             searchInput.addEventListener("input", function(term){
                 
@@ -55,6 +61,7 @@
                     searchControl.searchForType(searchTerm, searchType.value, addAll);
                 }
             });
+            
         </script>
     </body>
 </html>
